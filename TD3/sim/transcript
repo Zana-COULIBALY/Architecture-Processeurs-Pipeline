@@ -1,0 +1,94 @@
+# vsim RV32i_tb -debugDB 
+# Start time: 12:53:06 on Jan 15,2026
+# Loading sv_std.std
+# Loading work.RV32i_tb
+# Loading work.RV32i_soc
+# Loading work.RV32i_pkg
+# Loading work.RV32i_top
+# Loading work.RV32i_datapath
+# Loading work.regfile
+# Loading work.alu
+# Loading work.RV32i_controlpath
+# Loading work.cache
+# Loading work.wsync_mem_o128
+# Loading work.wsync_mem
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# It appears vopt was not run with -debugdb option on this design.
+# Advanced Causality and Schematic debug features will not be available.
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/cache_data_r
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/hit_w
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/addr_i
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/read_word_o
+add wave -position 0  sim:/RV32i_tb/RV32i_soc_inst/clk_i
+add wave -position 1  sim:/RV32i_tb/RV32i_soc_inst/resetn_i
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/RV32i_core/cp/instruction_i
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/RV32i_core/cp/inst_wb_r
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/RV32i_core/cp/inst_mem_r
+add wave -position 7  sim:/RV32i_tb/RV32i_soc_inst/RV32i_core/cp/inst_dec_w
+add wave -position 8  sim:/RV32i_tb/RV32i_soc_inst/RV32i_core/cp/inst_exec_r
+add wave -position 6  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/mem_read_data_i
+add wave -position 4  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/mem_addr_o
+add wave -position 2  sim:/RV32i_tb/RV32i_soc_inst/imem/cnt_r
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/read_en_i
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/mem_read_valid_i
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/read_valid_o
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/mem_read_en_o
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/offset_w
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/index_w
+add wave -position end  sim:/RV32i_tb/RV32i_soc_inst/cache_instruction/offset_word_lecture_w
+run -all 
+# half running period= 5.000000
+# At time                    0, instruction= 00000000 t0=00000000 t1=00000000 t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# ** Warning: (vsim-8315) ../hdl_src/RV32i_pipeline_datapath.sv(233): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 3  Instance: /RV32i_tb/RV32i_soc_inst/RV32i_core/dp
+# At time                50000, instruction= 00000013 t0=00000000 t1=00000000 t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time                80000, instruction= 00000000 t0=00000000 t1=00000000 t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# ** Warning: (vsim-8315) ../hdl_src/RV32i_pipeline_datapath.sv(233): No condition is true in the unique/priority if/case statement.
+#    Time: 80 ns  Iteration: 4  Instance: /RV32i_tb/RV32i_soc_inst/RV32i_core/dp
+# At time                90000, instruction= 00f00313 t0=00000000 t1=00000000 t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               100000, instruction= 0000a0b7 t0=00000000 t1=00000000 t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               110000, instruction= 00000013 t0=00000000 t1=00000000 t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               180000, instruction= 5a508093 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               190000, instruction= 00700113 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               200000, instruction= 00000013 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               260000, instruction= 0010f193 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               270000, instruction= 00000013 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               340000, instruction= 00018863 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               350000, instruction= 00000013 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               410000, instruction= 00220233 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               420000, instruction= 4010d093 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               430000, instruction= 00000013 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               450000, instruction= 00111113 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               460000, instruction= 00000013 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               480000, instruction= 00128293 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               490000, instruction= 00000013 t0=00000000 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               560000, instruction= fc5354e3 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               570000, instruction= 00000013 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               630000, instruction= 00018863 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               640000, instruction= 00000013 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               660000, instruction= 00220233 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               670000, instruction= 4010d093 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               680000, instruction= 00000013 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               700000, instruction= 00111113 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               710000, instruction= 00128293 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               720000, instruction= 00000013 t0=00000001 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               740000, instruction= 004003b3 t0=00000002 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               750000, instruction= 0000006f t0=00000002 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# ** Warning: (vsim-8315) ../hdl_src/RV32i_pipeline_datapath.sv(233): No condition is true in the unique/priority if/case statement.
+#    Time: 750 ns  Iteration: 5  Instance: /RV32i_tb/RV32i_soc_inst/RV32i_core/dp
+# At time               760000, instruction= 00000013 t0=00000002 t1=0000000f t2=00000000 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               770000, instruction= 0000006f t0=00000002 t1=0000000f t2=00000015 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# ** Warning: (vsim-8315) ../hdl_src/RV32i_pipeline_datapath.sv(233): No condition is true in the unique/priority if/case statement.
+#    Time: 770 ns  Iteration: 5  Instance: /RV32i_tb/RV32i_soc_inst/RV32i_core/dp
+# At time               780000, instruction= 00000013 t0=00000002 t1=0000000f t2=00000015 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# At time               810000, instruction= 0000006f t0=00000002 t1=0000000f t2=00000015 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# ** Warning: (vsim-8315) ../hdl_src/RV32i_pipeline_datapath.sv(233): No condition is true in the unique/priority if/case statement.
+#    Time: 810 ns  Iteration: 5  Instance: /RV32i_tb/RV32i_soc_inst/RV32i_core/dp
+# At time               820000, instruction= 00000013 t0=00000002 t1=0000000f t2=00000015 t3=00000000 s1_w=00000000 a0=00000000 a1=00000000 a2=00000000 a3=00000000 a4=00000000 a5=00000000
+# Simulation stops at               820000
+# ** Note: $stop    : ../tb/RV32i_tb.sv(96)
+#    Time: 820 ns  Iteration: 3  Instance: /RV32i_tb
+# Break in Module RV32i_tb at ../tb/RV32i_tb.sv line 96
+# Break key hit
+# End time: 13:59:02 on Jan 15,2026, Elapsed time: 1:05:56
+# Errors: 0, Warnings: 5
