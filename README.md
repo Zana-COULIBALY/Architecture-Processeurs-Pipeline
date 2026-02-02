@@ -1,94 +1,74 @@
-# Architecture-Processeurs-Pipeline
+# Architecture Processeurs Pipeline
 
+Implémentation et simulation d'un processeur RISC-V RV32I en HDL pour l'apprentissage de l'architecture des processeurs. Conception du datapath, du control path, exécution d'instructions assembleur et validation par simulation.
 
-Implémentation et simulation d’un processeur RISC-V RV32I en HDL dans le cadre de travaux pratiques d’architecture des processeurs.
-Le projet couvre la conception du datapath, du control path, l’exécution d’instructions assembleur et la validation par simulation.
-
-📁 Structure du dépôt
+## Structure du projet
+```
 archiproc2/
 ├── TD1/
-│   └── exo1/
-│       └── firmware/
-|       └── hdl_src/
-|       └── sim
-|       └── tb
-|   TD1.pdf
+│   ├── exo1/
+│   │   ├── firmware/
+│   │   ├── hdl_src/
+│   │   ├── sim/
+│   │   └── tb/
+│   └── TD1.pdf
 ├── TD2/
-│   └── exo2/
-│       └── firmware/
-|       └── hdl_src/
-|       └── sim
-|       └── tb
-│   TD2.pdf
-|
+│   ├── exo2/
+│   │   ├── firmware/
+│   │   ├── hdl_src/
+│   │   ├── sim/
+│   │   └── tb/
+│   └── TD2.pdf
 └── TD3/
-|    ├── exo3/
-│       └── firmware/
-|       └── hdl_src/
-|       └── sim
-|       └── tb
-|   TD3.pdf
+    ├── exo3/
+    │   ├── firmware/
+    │   ├── hdl_src/
+    │   ├── sim/
+    │   └── tb/
+    └── TD3.pdf
+```
 
-🚀 Fonctionnalités
+## Caractéristiques
 
-Architecture RISC-V RV32I
+- Architecture RISC-V RV32I
+- Séparation datapath/control path
+- Exécution d'instructions assembleur
+- Gestion registres, ALU et mémoire
+- Bancs de test SystemVerilog
+- Projets ModelSim/Questa (.mpf, dossier work/)
 
-Datapath et control path séparés
+## Prérequis
 
-Exécution d’instructions assembleur
+- ModelSim ou Questa
+- Chaîne de compilation RISC-V (`riscv32-unknown-elf-gcc`, `objcopy`, `objdump`)
+- Linux ou WSL
 
-Gestion des registres, ALU et mémoire
+## Utilisation
 
-Simulation complète via bancs de test SystemVerilog
-
-Projets prêts à l’emploi sous ModelSim / Questa
-
-🧪 Simulation
-
-Banc de test principal : RV32i_tb.sv
-
-Projets ModelSim fournis (.mpf, dossier work/)
-
-Chargement des fichiers mémoire (imem.hex, dmem.hex) générés depuis le firmware
-
-🔧 Prérequis
-
-ModelSim ou Questa
-
-Chaîne de compilation RISC-V
-(riscv32-unknown-elf-gcc, objcopy, objdump)
-
-Linux ou WSL recommandé
-
-▶️ Utilisation rapide
-
-Compiler le firmware :
-
+### Compilation du firmware
+```bash
 cd TD1/exo1/firmware
 ./build.sh
+```
 
-
-Lancer la simulation via ModelSim : 
+### Lancement de la simulation
+```bash
 cd TD1/exo1/sim
 ./build.sh
+```
 
+Le banc de test principal `RV32i_tb.sv` charge les fichiers mémoire (`imem.hex`, `dmem.hex`) générés depuis le firmware.
 
-Observer l’exécution des instructions et les signaux internes
+## Objectifs pédagogiques
 
-🎯 Objectifs du projet
+- Comprendre le fonctionnement interne d'un processeur RISC-V
+- Corriger les dépendances de données et de contrôle dans un pipeline
 
-Comprendre le fonctionnement interne d’un processeur RISC-V
+## Limitations
 
-Apprendre à corriger les dépendances de données et de contrôle dans un pipeline.
+- Simulation fonctionnelle uniquement (pas de synthèse FPGA)
+- Dépendant des outils de simulation utilisés
 
-⚠️ Limitations
-
-Projet non destiné à la synthèse FPGA
-
-Simulation fonctionnelle uniquement
-
-Dépendance aux outils de simulation utilisés
-
-📜 Licence
+## Licence
 
 Projet académique – utilisation libre à des fins pédagogiques.
