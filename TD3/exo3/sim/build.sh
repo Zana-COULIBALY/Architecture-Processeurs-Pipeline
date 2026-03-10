@@ -1,0 +1,38 @@
+#! /usr/bin/env bash
+files_list=(../hdl_src/RV32i_pkg.sv \
+    ../hdl_src/regfile.sv \
+    ../hdl_src/RV32i_alu.sv \
+    ../hdl_src/RV32i_pipeline_controlpath.sv \
+    ../hdl_src/RV32i_pipeline_datapath.sv \
+    ../hdl_src/RV32i_pipeline_top.sv \
+    ../hdl_src/RV32i_soc.sv \
+    ../hdl_src/wsync_mem_o128.sv \
+    ../hdl_src/wsync_mem.sv \
+    ../hdl_src/direct_cache.sv \
+    ../tb/RV32i_tb.sv)
+
+
+if [ ! -d ./libs ]; then
+  mkdir libs
+fi
+
+if [-d ./libs/work ]
+then
+    vdel -lib ./libs/work/ -all
+    vlib ./libs/work
+else
+    vlib ./libs/work
+fi
+vmap work ./libs/work
+
+for file in ${files_list[*]} ;do
+    echo "compiling : " $file
+    output=$(vlog -work work "+acc" -sv $file 2>&1)
+    if echo "$output" | grep -q "Errors: [1-9]"; then
+        echo "$output"
+        echo "Compilation error detected. Exiting..."
+        exit 1
+    fi
+done
+
+vsim RV32i_tb -debugDB
